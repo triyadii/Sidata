@@ -6,6 +6,20 @@ use CodeIgniter\Model;
 
 class Model_data extends Model
 {
+    public function tampilPengguna()
+    {
+        $db      = \Config\Database::connect();
+        $builder = $db->table('tbl_user');
+        $builder->select('*');
+        return $builder->get()->getResultArray();
+    }
+    public function cekUsername($username)
+    {
+        $db      = \Config\Database::connect();
+        $builder = $db->table('tbl_user');
+        $builder->where('username', $username);
+        return $builder->get()->getResultArray();
+    }
     public function tampilDataDPT()
     {
         $db      = \Config\Database::connect();
