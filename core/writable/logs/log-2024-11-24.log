@@ -1,0 +1,110 @@
+ERROR - 2024-11-24 18:08:28 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\project\sidata\core\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\project\sidata\core\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\xampp\htdocs\project\sidata\core\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\project\sidata\core\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\project\sidata\core\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\project\sidata\core\app\Models\Model_data.php(15): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\project\sidata\core\app\Controllers\Page.php(16): App\Models\Model_data->tampilDataDPT()
+#6 C:\xampp\htdocs\project\sidata\core\system\CodeIgniter.php(933): App\Controllers\Page->peserta()
+#7 C:\xampp\htdocs\project\sidata\core\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#8 C:\xampp\htdocs\project\sidata\core\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\project\sidata\core\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\project\sidata\core\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\project\sidata\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\project\sidata\core\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\project\sidata\core\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\project\sidata\core\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\project\sidata\core\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\project\sidata\core\app\Models\Model_data.php(15): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\project\sidata\core\app\Controllers\Page.php(16): App\Models\Model_data->tampilDataDPT()
+#5 C:\xampp\htdocs\project\sidata\core\system\CodeIgniter.php(933): App\Controllers\Page->peserta()
+#6 C:\xampp\htdocs\project\sidata\core\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#7 C:\xampp\htdocs\project\sidata\core\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\project\sidata\core\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\project\sidata\core\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\project\sidata\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-11-24 18:08:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: GET, Route: Peserta]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_dpt`
+ORDER BY `idDPT` DESC', [], false)
+ 3 APPPATH\Models\Model_data.php(15): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Page.php(16): App\Models\Model_data->tampilDataDPT()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Page->peserta()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-11-24 18:08:45 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\project\sidata\core\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\project\sidata\core\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\xampp\htdocs\project\sidata\core\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\project\sidata\core\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\project\sidata\core\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\project\sidata\core\app\Models\Model_data.php(15): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\project\sidata\core\app\Controllers\Page.php(16): App\Models\Model_data->tampilDataDPT()
+#6 C:\xampp\htdocs\project\sidata\core\system\CodeIgniter.php(933): App\Controllers\Page->peserta()
+#7 C:\xampp\htdocs\project\sidata\core\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#8 C:\xampp\htdocs\project\sidata\core\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\project\sidata\core\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\project\sidata\core\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\project\sidata\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\project\sidata\core\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\project\sidata\core\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\project\sidata\core\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\project\sidata\core\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\project\sidata\core\app\Models\Model_data.php(15): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\project\sidata\core\app\Controllers\Page.php(16): App\Models\Model_data->tampilDataDPT()
+#5 C:\xampp\htdocs\project\sidata\core\system\CodeIgniter.php(933): App\Controllers\Page->peserta()
+#6 C:\xampp\htdocs\project\sidata\core\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#7 C:\xampp\htdocs\project\sidata\core\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\project\sidata\core\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\project\sidata\core\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\project\sidata\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-11-24 18:08:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: GET, Route: Peserta]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_dpt`
+ORDER BY `idDPT` DESC', [], false)
+ 3 APPPATH\Models\Model_data.php(15): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Page.php(16): App\Models\Model_data->tampilDataDPT()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Page->peserta()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-24 18:22:50 --> ErrorException: Undefined variable $session
+[Method: GET, Route: Peserta]
+in APPPATH\Views\nav\footer.php on line 39.
+ 1 APPPATH\Views\nav\footer.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'C:\\xampp\\htdocs\\project\\sidata\\core\\app\\Views\\nav\\footer.php', 39)
+ 2 APPPATH\Views\peserta.php(82): include('C:\\xampp\\htdocs\\project\\sidata\\core\\app\\Views\\nav\\footer.php')
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\project\\sidata\\core\\app\\Views\\peserta.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('peserta', [], true)
+ 6 APPPATH\Controllers\Page.php(17): view('peserta', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Page->peserta()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-24 18:24:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-24 18:26:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-24 22:16:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
